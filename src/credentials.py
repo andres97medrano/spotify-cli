@@ -18,5 +18,17 @@ Create an app
 
     Finally, check the Developer Terms of Service checkbox and tap on the Create button.
 """
-CLIENT_ID = ""
-CLIENT_SECRET = ""
+
+
+class SpotifyCredentialsNotSetError(Exception):
+    pass
+
+
+def get_client_id() -> str:
+    # return "YOUR_CLIENT_ID_HERE"
+    raise SpotifyCredentialsNotSetError("Missing Spotify CLIENT_ID. Fill me in at credentials.py.")
+
+
+def get_client_secret() -> str:
+    # return "YOUR_CLIENT_SECRET_HERE"
+    raise SpotifyCredentialsNotSetError("Missing Spotify CLIENT_SECRET. Fill me in at credentials.py.")

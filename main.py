@@ -3,7 +3,7 @@ from typing import Dict
 
 from src.api.spotify_api_client import SpotifyAPIClient
 from src.artist_directory import ArtistDirectory
-from src.credentials import CLIENT_ID, CLIENT_SECRET
+from src.credentials import get_client_id, get_client_secret
 from src.subcommands.subcommand_albums import AlbumsSubcommand
 from src.subcommands.subcommand_base import SubcommandBase
 from src.subcommands.subcommand_similiar_to import SimilarToSubcommand
@@ -43,6 +43,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     selected_subcommand = subcommand_map[args.subcommand]
-    spotify_api_client = SpotifyAPIClient(client_id=CLIENT_ID, client_secret=CLIENT_SECRET)
+    spotify_api_client = SpotifyAPIClient(client_id=get_client_id(), client_secret=get_client_secret())
 
     selected_subcommand.run(args=args, spotify_api_client=spotify_api_client, artist_directory=artist_directory)
