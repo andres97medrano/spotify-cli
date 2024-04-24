@@ -60,10 +60,17 @@ class FeaturedPlaylistsSubcommand(SubcommandBase):
 
             and you can print it here as so:
 
-                featured_playlists = spotify_api_client.get_featured_playlists()
-                print(json.dumps(featured_playlists, indent=4))
+                Add this import statement to the top of your file:
 
-                Note: You'll need to add an `import json` line to the top of the file.
+                    from src.pretty_print import pretty_print
+
+                Get response object
+
+                    response = spotify_api_client.get_featured_playlists()
+
+                Print the response with the pretty_print function:
+
+                    pretty_print(response)
 
             Once you've figured out the shape of the JSON and how you'd like to parse it, fill out
             the `Playlist` object inside of playlist.py.
@@ -72,5 +79,4 @@ class FeaturedPlaylistsSubcommand(SubcommandBase):
             Call `spotify_api_client.get_featured_playlists()` method and display the information
             in any way you'd like.
         """
-
         print("ERROR: This subcommand has not yet been implemented. Fill me out.")

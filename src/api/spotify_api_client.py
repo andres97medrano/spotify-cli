@@ -62,7 +62,18 @@ class SpotifyAPIClient(object):
 
         return [Album(album_json=album_json) for album_json in response["items"]]
 
-    # TODO: Add new methods below here...
+    # TODO:
+    #   - Implement `similar_to()`.
+    #   - Specify the return type of the method. What is it returning?
+    def similar_to(self, artist_id: str):
+        raise NotImplementedError("You must implement this method.")
+
+    # TODO:
+    #   - Implement `get_featured_playlists`.
+    #   - Specify the return type of the method. What is it returning?
+    #       Hint: Look inside the 'src/model' folder.
+    def get_featured_playlists(self):
+        raise NotImplementedError("You must implement this method.")
 
     # =================================
     # PRIVATE METHODS

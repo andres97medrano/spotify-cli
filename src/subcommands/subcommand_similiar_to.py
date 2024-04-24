@@ -31,8 +31,7 @@ class SimilarToSubcommand(SubcommandBase):
             Visit Spotify's API Docs: https://developer.spotify.com/documentation/web-api
 
         STEP 2:
-            Add a method to the `SpotifyAPIClient` class named `get_similar_artists()`.
-            Decide which parameters will be needed for that method.
+            Implement the `get_similar_artists()` method in the `SpotifyAPIClient` class.
             Note which parameters you'll need from the user. You have access to the `args` and `artist_directory`
             objects in this method.
 
@@ -41,6 +40,4 @@ class SimilarToSubcommand(SubcommandBase):
             in any way you'd like.
 
         """
-        # similar_artists = spotify_api_client.get_similar_artists(...)
-
         print("ERROR: This subcommand has not yet been implemented. Fill me out.")
